@@ -5,7 +5,7 @@ nav:
   tooltip: Software, datasets, and more
 ---
 
-# {% include icon.html icon="fa-solid fa-wrench" %}Projects
+# {% include icon.html icon="fa-solid fa-wrench" %}Writing Pieces
 
 Passionate about connecting people with science 
 
@@ -17,10 +17,10 @@ Passionate about connecting people with science
 
 ## Featured
 
-{% include list.html component="card" data="projects" filter="group == 'featured'" %}
+{% include list.html component="card" data="Writing Pieces" filter="group == 'featured'" %}
 
 {% include section.html %}
 
 ## More
 
-{% include list.html component="card" data="projects" filter="!group" style="small" %}
+{% include list.html component="card" data="Writing Pieces" filter="!group" style="small" %}
