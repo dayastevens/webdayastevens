@@ -5,6 +5,6 @@
 
   # dayastevens's Website
 
-  Visit **[dayastevens.com](http://dayastevens.com)** 🚀
+  Visit **[dayastevens.github.io/webdayastevens](https://dayastevens.github.io/webdayastevens)** 🚀
 
   _Built with [Lab Website Template](https://greene-lab.gitbook.io/lab-website-template-docs)_
