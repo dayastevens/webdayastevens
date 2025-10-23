@@ -1,13 +1,11 @@
-Daya Stevens
+# Daya Stevens
 ---
 
-# dayastevens's Website
-
-Passionate about connecting people with science
+# Passionate about connecting people with science
 
 {% include section.html %}
 
-My Writing Pieces:
+# My Writing Pieces:
 
 {% capture text %}
 
