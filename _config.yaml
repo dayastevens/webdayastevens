@@ -1,73 +1,31 @@
-# site properties and page defaults
-title: dayastevens
-subtitle: 
-description: An engaging 1-3 sentence description of your lab.
-header: images/background.jpg
-footer: images/background.jpg
-proofer: false
+# ==============================
+# SITE CONFIGURATION
+# ==============================
 
-# site social media and other links
-links:
-  email: contact@dayastevens.com
-  orcid: 0000-0001-8713-9213
-  google-scholar: ETJoidYAAAAJ
-  github: dayastevens
-  twitter: dayastevens
-  youtube: dayastevens
+title: "Daya Stevens"                # ← Replace with your name
+description: "Passionate about connecting people with science"  # ← Short description of your site
+url: "https://dayastevens.github.io"  # ← Leave as is
+baseurl: "/webdayastevens"           # ← Must match your repo name
+author: "Daya Stevens"               # ← Replace with your name
 
-### jekyll settings
+# ==============================
+# NAVIGATION BAR LINKS
+# ==============================
+# Each of these corresponds to a folder + index.md page
 
-# front matter defaults
-defaults:
-  # all markdown files
-  - scope:
-      path: ""
-    values:
-      layout: default
-  # markdown files in /_members
-  - scope:
-      type: "members"
-    values:
-      layout: member
-  # markdown files in /_posts
-  - scope:
-      type: "posts"
-    values:
-      layout: post
+nav:
+  - name: "Home"
+    link: "/"
+  - name: "About"
+    link: "/about/"
+  - name: "Writing Pieces"
+    link: "/writing/"
+  - name: "Contact"
+    link: "/contact/"
 
-collections:
-  # generate page for each member
-  members:
-    output: true
-  # generate page for each post
-  posts:
-    output: true
+# ==============================
+# THEME / APPEARANCE SETTINGS
+# ==============================
 
-# jekyll plugins
-plugins:
-  - jekyll-spaceship
-  - jekyll-sitemap
-  - jekyll-redirect-from
-  - jekyll-feed
-  - jekyll-last-modified-at
-
-# code block syntax highlighting
-highlighter: rouge
-
-# jekyll theme
-theme: null
-
-# sass settings
-sass:
-  sass_dir: _styles
-
-# force jekyll to include certain files/folders
-include:
-  - _styles
-  - _scripts
-
-# force jekyll to exclude certain files/folders
-exclude:
-  - README.md
-  - LICENSE.md
-  - CITATION.cff
+theme: minima        # Keep or change if you use a different theme
+markdown: kramdown
