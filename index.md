@@ -1,13 +1,13 @@
----
+Daya Stevens
 ---
 
 # dayastevens's Website
 
-An engaging 1-3 sentence description of your lab.
+Passionate about connecting people with science
 
 {% include section.html %}
 
-## Highlights
+My Writing Pieces:
 
 {% capture text %}
 
