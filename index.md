@@ -3,8 +3,14 @@ layout: default
 title: Home
 ---
 
-# Daya Stevens  
-*Science Writer*
+<div class="hero">
+  <div class="overlay">
+    <h1>Daya Stevens</h1>
+    <p>Science Writer</p>
+  </div>
+</div>
 
-Passionate about connecting people with science.  
-Check out my [stories](stories.html) or learn more [about me](about.html).
+<section class="intro">
+  <p>Passionate about connecting people with science.  
+  Check out my <a href="stories.html">stories</a> or learn more <a href="about.html">about me</a>.</p>
+</section>
