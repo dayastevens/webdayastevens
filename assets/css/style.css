@@ -40,7 +40,7 @@ nav a:hover {
 }
 /* === HERO SECTION === */
 .hero {
-  background-image: url('/webdayastevens/assets/images/header.jpg');
+  background-image: url('/assets/images/moss.jpeg');
   background-size: cover;
   background-position: center;
   height: 80vh; /* Adjust height here: 80vh = 80% of screen height */
