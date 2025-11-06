@@ -1,30 +1,121 @@
+/* Base styles */
 body {
-  background-image: url('images/background.jpeg'); /* you'll add this image next */
+  background-image: url('images/background.jpeg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  height: 100vh;
   margin: 0;
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
   color: white;
   text-align: center;
 }
 
-/* Center text on the screen */
-header {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+/* Hero section */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 20px;
 }
 
-h1 {
-  font-size: 3em;
-  letter-spacing: 2px;
+.hero-text h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 4em;
   margin: 0;
+  letter-spacing: 2px;
 }
 
-p {
+.subtitle {
+  font-size: 1.5em;
+  margin: 10px 0 20px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid white;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Intro section */
+.intro {
+  padding: 60px 20px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.intro h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.intro p {
   font-size: 1.2em;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Featured stories */
+.featured {
+  padding: 60px 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.featured h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.story-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: left;
+  color: white;
+}
+
+.story-card h3 {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
+.story-card p {
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+.story-card a {
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.story-card a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8);
+  font-size: 0.9em;
 }
