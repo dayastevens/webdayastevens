@@ -199,3 +199,57 @@ footer {
 .contact a:hover {
   text-decoration: underline;
 }
+/* Pieces page layout */
+.pieces-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.story-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  color: white;
+  text-align: left;
+  transition: transform 0.3s ease;
+}
+
+.story-card:hover {
+  transform: translateY(-5px);
+}
+
+.story-card h2 {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
+.story-card p {
+  font-size: 1em;
+  margin-bottom: 10px;
+}
+
+.story-card a {
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.story-card a:hover {
+  text-decoration: underline;
+}
+
+/* Optional image styling */
+.story-img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 15px;
+}
