@@ -148,11 +148,11 @@ body.home {
 
 /* Example background images — replace these with your actual image files */
 .link-box.gallery {
-  background-image: url('images/gallery-background.jpg');
+  background-image: url('images/gallery-background.png');
 }
 
 .link-box.work {
-  background-image: url('images/work-background.jpg');
+  background-image: url('images/work-background.JPG');
 }
 
 /* --- Responsive Layout --- */
