@@ -277,3 +277,29 @@ footer {
 .contact-info a:hover {
   text-decoration: underline;
 }
+/* Social media icons */
+.social-links {
+  margin-top: 40px;
+  text-align: center;
+}
+
+.social-links h2 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.icons img {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.3s ease;
+}
+
+.icons img:hover {
+  transform: scale(1.2);
+}
