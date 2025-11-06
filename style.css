@@ -253,3 +253,27 @@ footer {
   border-radius: 6px;
   margin-bottom: 15px;
 }
+/* Contact page layout */
+.contact-content {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: left;
+}
+
+.contact-info p {
+  font-size: 1.1em;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.contact-info a {
+  color: #ffd700;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
