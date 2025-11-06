@@ -1,12 +1,69 @@
-/* --- Overlay for hero text --- */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Lora:wght@400;500&display=swap');
+
+/* --- General Styles --- */
+body {
+  margin: 0;
+  padding-top: 70px;
+  font-family: 'Lora', serif;
+  color: #2c2c2c;
+  line-height: 1.6;
+}
+
+body.home {
+  background-image: url('images/background.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+/* --- Navigation Bar --- */
+.navbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.95); /* slightly more opaque */
+  border-bottom: 1px solid #ddd;
+  padding: 15px 30px;
+  z-index: 1000;
+  display: flex;
+  justify-content: flex-end;
+  -webkit-font-smoothing: antialiased;
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar a {
+  font-family: 'Lora', serif;
+  color: #2c2c2c;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #3b6f5e;
+}
+
+/* --- Hero Section --- */
 .hero {
   position: relative;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-align: center;
   flex-direction: column;
+  text-align: center;
 }
 
 .hero .overlay {
@@ -15,7 +72,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(255, 255, 255, 0.25); /* semi-transparent white overlay */
+  background: rgba(255, 255, 255, 0.25); /* subtle white overlay for clarity */
   z-index: 0;
 }
 
@@ -26,13 +83,20 @@
   text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
 }
 
-/* --- Navbar clearer background --- */
-.navbar {
-  background-color: rgba(255, 255, 255, 0.95);
-  -webkit-font-smoothing: antialiased;
+.name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3em;
+  margin: 0;
 }
 
-/* --- Scrollable section with clickable image boxes --- */
+.tagline {
+  font-size: 1.2em;
+  letter-spacing: 2px;
+  margin-top: 10px;
+  text-transform: uppercase;
+}
+
+/* --- Scrollable Section with Clickable Image Boxes --- */
 .links-section {
   display: flex;
   flex-wrap: wrap;
@@ -57,7 +121,7 @@
   transform: scale(1.03);
 }
 
-/* Overlays on the link images */
+/* Text overlay inside link boxes */
 .link-overlay {
   position: absolute;
   top: 0;
@@ -74,23 +138,24 @@
   letter-spacing: 2px;
   text-transform: uppercase;
   font-size: 1.5em;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, transform 0.3s ease;
 }
 
 .link-box:hover .link-overlay {
   background: rgba(0, 0, 0, 0.6);
+  transform: scale(1.02);
 }
 
-/* Example background images — replace with your file path */
+/* Example background images — replace these with your actual image files */
 .link-box.gallery {
-  background-image: url('images/gallery-background.jpg'); /* replace with your uploaded image */
+  background-image: url('images/gallery-background.jpg');
 }
 
 .link-box.work {
-  background-image: url('images/work-background.jpg'); /* replace with your uploaded image */
+  background-image: url('images/work-background.jpg');
 }
 
-/* Responsive layout for small screens */
+/* --- Responsive Layout --- */
 @media (max-width: 800px) {
   .links-section {
     flex-direction: column;
