@@ -1,15 +1,17 @@
-/* Font setup */
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Work+Sans:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Lora:wght@400;500&display=swap');
 
 /* Base styles */
 body {
-  padding-top: 70px;
   margin: 0;
-  font-family: 'Work Sans', sans-serif;
-  background-color: #f9f9f9;
+  padding-top: 70px;
+  font-family: 'Lora', serif;
   color: #2c2c2c;
+  background-image: url('images/background.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   line-height: 1.6;
-  text-align: center;
 }
 
 /* Navigation bar */
@@ -17,8 +19,8 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  background-color: #ffffff;
-  border-bottom: 1px solid #e0e0e0;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-bottom: 1px solid #ddd;
   padding: 15px 0;
   z-index: 1000;
 }
@@ -50,94 +52,74 @@ body {
 /* Hero section */
 .hero {
   height: 100vh;
-  background: linear-gradient(to bottom right, #e8f0ef, #f9f9f9);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  text-align: center;
   padding: 0 20px;
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
-.hero-text h1 {
-  font-family: 'DM Serif Display', serif;
-  font-size: 4em;
+.name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 5em;
   margin: 0;
+  letter-spacing: 1px;
 }
 
-.subtitle {
-  font-size: 1.5em;
-  margin: 10px 0 20px;
-}
-
-.cta-button {
-  display: inline-block;
-  padding: 12px 24px;
-  background-color: #3b6f5e;
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  border-radius: 4px;
-  transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-  background-color: #2f5c4d;
+.tagline {
+  font-family: 'Lora', serif;
+  font-size: 1.2em;
+  margin-top: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
 }
 
 /* Section headers */
 .subpage-header {
   padding: 100px 20px 40px;
-  background-color: #e8f0ef;
+  background-color: rgba(255, 255, 255, 0.85);
   text-align: center;
 }
 
 .subpage-header h1 {
-  font-family: 'DM Serif Display', serif;
+  font-family: 'Cormorant Garamond', serif;
   font-size: 3em;
   margin: 0;
 }
 
-/* Intro section */
-.intro {
-  padding: 60px 20px;
-  background-color: #ffffff;
-}
-
-.intro h2 {
-  font-size: 2em;
-  margin-bottom: 10px;
-}
-
-.intro p {
-  font-size: 1.2em;
-  max-width: 600px;
+/* Main content wrapper */
+main {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 40px 20px;
+  max-width: 1000px;
   margin: 0 auto;
+  border-radius: 8px;
+  text-align: left;
 }
 
-/* Featured stories */
-.featured {
-  padding: 60px 20px;
-  background-color: #f0f0f0;
+/* About content */
+.about-content {
+  text-align: left;
 }
 
-.featured h2 {
-  font-size: 2em;
-  margin-bottom: 30px;
+.bio p {
+  font-size: 1.1em;
+  margin-bottom: 20px;
 }
 
+/* Pieces layout */
 .story-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 30px;
-  max-width: 1000px;
-  margin: 0 auto;
 }
 
 .story-card {
   background-color: #ffffff;
   padding: 20px;
   border-radius: 8px;
-  text-align: left;
   color: #2c2c2c;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
   transition: transform 0.3s ease;
@@ -147,10 +129,10 @@ body {
   transform: translateY(-5px);
 }
 
-.story-card h2, .story-card h3 {
+.story-card h2 {
+  font-family: 'Cormorant Garamond', serif;
   font-size: 1.4em;
   margin-bottom: 10px;
-  font-family: 'DM Serif Display', serif;
 }
 
 .story-card p {
@@ -168,54 +150,13 @@ body {
   text-decoration: underline;
 }
 
-/* Footer */
-footer {
-  padding: 20px;
-  background-color: #e8f0ef;
-  font-size: 0.9em;
-}
-
-/* About content */
-.about-content {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  background-color: #ffffff;
-  text-align: left;
-}
-
-.bio p {
-  font-size: 1.1em;
-  line-height: 1.6;
-  margin-bottom: 20px;
-}
-
-/* Contact section */
-.contact h2 {
-  font-size: 1.5em;
-  margin-top: 40px;
-}
-
-.contact a {
-  color: #3b6f5e;
-  text-decoration: none;
-}
-
-.contact a:hover {
-  text-decoration: underline;
-}
-
+/* Contact page */
 .contact-content {
-  max-width: 700px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  background-color: #ffffff;
   text-align: left;
 }
 
 .contact-info p {
   font-size: 1.1em;
-  line-height: 1.6;
   margin-bottom: 20px;
 }
 
@@ -256,10 +197,10 @@ footer {
   transform: scale(1.2);
 }
 
-/* Optional image styling */
-.story-img {
-  width: 100%;
-  height: auto;
-  border-radius: 6px;
-  margin-bottom: 15px;
+/* Footer */
+footer {
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  font-size: 0.9em;
 }
