@@ -1,17 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Lora:wght@400;500&display=swap');
 
-/* Base styles */
 body {
   margin: 0;
   padding-top: 70px;
   font-family: 'Lora', serif;
   color: #2c2c2c;
+  line-height: 1.6;
+}
+
+body.home {
   background-image: url('images/background.jpeg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  line-height: 1.6;
 }
 
 /* Navigation bar */
@@ -36,4 +38,28 @@ body {
   padding: 0;
 }
 
-.nav
+.navbar a {
+  font-family: 'Lora', serif;
+  color: #2c2c2c;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1em;
+  transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #3b6f5e;
+}
+
+/* Hero section */
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.name {
+  font-family: 'Cormorant Garamond', serif;
