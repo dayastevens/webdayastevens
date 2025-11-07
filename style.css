@@ -456,3 +456,26 @@ body.homepage .overlay {
   color: #fff;
   cursor: pointer;
 }
+/* Hover captions for gallery */
+.gallery-item {
+  position: relative;
+}
+
+.gallery-item::after {
+  content: attr(data-caption);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 1rem;
+  text-align: center;
+  padding: 8px 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover::after {
+  opacity: 1;
+}
