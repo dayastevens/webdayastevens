@@ -401,3 +401,7 @@ body.home {
 body.homepage .overlay {
   background: none !important;
 }
+/* Add spacing between full-screen cards on Pieces page */
+.story-card {
+  margin-bottom: 40px; /* Adjust this value for more or less space */
+}
