@@ -331,3 +331,53 @@ body.home {
 .story-text a:hover {
   color: #2c2c2c;
 }
+/* --- Pieces Gallery Layout --- */
+.pieces-gallery {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.story-tile {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+}
+
+.story-tile:hover {
+  transform: scale(1.02);
+}
+
+.story-tile img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.story-caption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  text-align: center;
+}
+
+.story-caption h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.4em;
+  color: #fff;
+  margin: 0;
+}
