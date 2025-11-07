@@ -397,3 +397,7 @@ body.home {
     padding: 15px;
   }
 }
+/* Remove overlay ONLY on homepage */
+body.homepage .overlay {
+  background: none !important;
+}
