@@ -23,40 +23,35 @@
   </header>
 
   <main class="pieces-gallery">
-    <section class="story-grid">
-      <a href="https://thephiladelphiacitizen.org/the-citizen-recommends-arx-science-meets-art/" class="story-tile" target="_blank">
-        <img src="images/arx.png" alt="Where Science Meets Art thumbnail" />
-        <div class="story-caption">
+    <section class="story-stack">
+      <a href="https://thephiladelphiacitizen.org/the-citizen-recommends-arx-science-meets-art/" class="story-card" style="background-image: url('images/arx.png');" target="_blank">
+        <div class="overlay">
           <h2>Where Science Meets Art</h2>
+          <p class="source">The Philadelphia Citizen</p>
+          <span class="arrow">→</span>
         </div>
       </a>
 
-      <a href="https://coloradogreennews.com/2025/10/28/autumns-arrival-turns-colorado-aspens-yellowwhile-you-can/" class="story-tile" target="_blank">
-        <img src="images/aspens.JPG" alt="Aspens in Autumn thumbnail" />
-        <div class="story-caption">
+      <a href="https://coloradogreennews.com/2025/10/28/autumns-arrival-turns-colorado-aspens-yellowwhile-you-can/" class="story-card" style="background-image: url('images/aspens.JPG');" target="_blank">
+        <div class="overlay">
           <h2>Autumn’s Arrival Turns Colorado Aspens Yellow</h2>
+          <p class="source">Colorado Green News</p>
+          <span class="arrow">→</span>
         </div>
       </a>
     </section>
   </main>
+
+  <script>
+    const cards = document.querySelectorAll('.story-card');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.3 });
+    cards.forEach(card => observer.observe(card));
+  </script>
 </body>
 </html>
-<main class="pieces-gallery">
-  <section class="story-stack">
-    <a href="https://thephiladelphiacitizen.org/the-citizen-recommends-arx-science-meets-art/" class="story-card" target="_blank" style="background-image: url('images/arx.png');">
-      <div class="overlay">
-        <h2>Where Science Meets Art</h2>
-        <p class="source">The Philadelphia Citizen</p>
-        <span class="arrow">→</span>
-      </div>
-    </a>
-
-    <a href="https://coloradogreennews.com/2025/10/28/autumns-arrival-turns-colorado-aspens-yellowwhile-you-can/" class="story-card" target="_blank" style="background-image: url('images/aspens.JPG');">
-      <div class="overlay">
-        <h2>Autumn’s Arrival Turns Colorado Aspens Yellow</h2>
-        <p class="source">Colorado Green News</p>
-        <span class="arrow">→</span>
-      </div>
-    </a>
-  </section>
-</main>
