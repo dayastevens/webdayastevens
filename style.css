@@ -153,11 +153,17 @@ body.home {
 
 /* Background images for homepage buttons */
 .link-box.gallery {
-  background-image: url('images/gallery-background.jpg');
+  background-image: url('images/explore.JPG');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .link-box.work {
-  background-image: url('images/work-background.jpg');
+  background-image: url('images/aspens.JPG');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 /* --- Fade-in animation --- */
@@ -266,10 +272,19 @@ body.home {
     align-items: center;
   }
 
-  .link-box {
-    width: 80%;
-    height: 300px;
-  }
+.link-box {
+  position: relative;
+  width: 45%;
+  height: 400px; /* consistent height */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 20px 0;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
 
   .name {
     font-size: 2.5em;
