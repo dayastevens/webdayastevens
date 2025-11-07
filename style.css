@@ -101,7 +101,7 @@ body.home {
   text-transform: uppercase;
 }
 
-/* --- Scrollable Section with Clickable Image Boxes --- */
+/* --- Homepage Link Boxes --- */
 .links-section {
   display: flex;
   flex-wrap: wrap;
@@ -151,7 +151,7 @@ body.home {
   transform: scale(1.02);
 }
 
-/* Background images */
+/* Background images for homepage buttons */
 .link-box.gallery {
   background-image: url('images/gallery-background.jpg');
 }
@@ -182,35 +182,6 @@ body.home {
   }
 }
 
-/* --- Responsive Layout --- */
-@media (max-width: 800px) {
-  .links-section {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .link-box {
-    width: 80%;
-    height: 300px;
-  }
-
-  .name {
-    font-size: 2.5em;
-  }
-
-  .tagline {
-    font-size: 1em;
-  }
-
-  .navbar {
-    justify-content: center;
-    padding: 10px 20px;
-  }
-
-  .navbar a {
-    font-size: 0.85em;
-  }
-}
 /* --- About Page Styles --- */
 .subpage-header {
   padding: 100px 0 40px;
@@ -235,103 +206,8 @@ body.home {
 .about-content .bio p {
   margin-bottom: 20px;
 }
-/* --- Pieces Page Styles --- */
-.pieces-content {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 40px 20px;
-}
 
-.story-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-}
-
-.story-card {
-  background-color: #f9f9f9;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
-}
-
-.story-card:hover {
-  transform: translateY(-5px);
-}
-
-.story-card h2 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.8em;
-  margin-bottom: 10px;
-  color: #2c2c2c;
-}
-
-.story-card p {
-  font-size: 1em;
-  margin-bottom: 15px;
-}
-
-.story-card a {
-  font-weight: bold;
-  color: #3b6f5e;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.story-card a:hover {
-  color: #2c2c2c;
-}
-
-/* Responsive layout */
-@media (max-width: 800px) {
-  .story-grid {
-    grid-template-columns: 1fr;
-  }
-}
-.story-card {
-  display: flex;
-  flex-direction: column;
-  background-color: #f9f9f9;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
-}
-
-.story-card img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.story-text {
-  padding: 20px;
-}
-
-.story-text h2 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.8em;
-  margin-bottom: 10px;
-  color: #2c2c2c;
-}
-
-.story-text p {
-  font-size: 1em;
-  margin-bottom: 15px;
-}
-
-.story-text a {
-  font-weight: bold;
-  color: #3b6f5e;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.story-text a:hover {
-  color: #2c2c2c;
-}
-/* --- Pieces Gallery Layout --- */
+/* --- Pieces Page (Avery-style) --- */
 .pieces-gallery {
   max-width: 1200px;
   margin: 0 auto;
@@ -380,4 +256,34 @@ body.home {
   font-size: 1.4em;
   color: #fff;
   margin: 0;
+}
+
+/* --- Responsive Layout --- */
+@media (max-width: 800px) {
+  .links-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .link-box {
+    width: 80%;
+    height: 300px;
+  }
+
+  .name {
+    font-size: 2.5em;
+  }
+
+  .tagline {
+    font-size: 1em;
+  }
+
+  .navbar {
+    justify-content: center;
+    padding: 10px 20px;
+  }
+
+  .navbar a {
+    font-size: 0.85em;
+  }
 }
