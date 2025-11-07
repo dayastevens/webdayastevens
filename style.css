@@ -207,7 +207,7 @@ body.home {
   margin-bottom: 20px;
 }
 
-/* --- Pieces Page (Avery-style) --- */
+/* --- Pieces Page (Avery-style refined) --- */
 .pieces-gallery {
   max-width: 1200px;
   margin: 0 auto;
@@ -237,24 +237,25 @@ body.home {
 
 .story-tile img {
   width: 100%;
-  height: auto;
-  display: block;
+  height: 250px; /* Uniform height for cropping */
   object-fit: cover;
+  display: block;
 }
 
+/* Caption styling — light and minimal */
 .story-caption {
   position: absolute;
   bottom: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  padding: 15px;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 10px 15px;
   text-align: center;
 }
 
 .story-caption h2 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 1.4em;
-  color: #fff;
+  font-size: 1.3em;
+  color: #2c2c2c;
   margin: 0;
 }
 
@@ -285,5 +286,9 @@ body.home {
 
   .navbar a {
     font-size: 0.85em;
+  }
+
+  .story-tile img {
+    height: 200px; /* Slightly smaller on mobile */
   }
 }
