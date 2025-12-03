@@ -25,39 +25,41 @@ body.home {
 
 /* --- Navigation Bar --- */
 .navbar {
-  position: fixed;
-  top: 0;
-  right: 0;
+  position: absolute; /* Float over hero image */
+  top: 20px;
+  left: 0;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.95);
-  border-bottom: 1px solid #ddd;
-  padding: 15px 30px;
-  z-index: 1000;
+  background: none; /* Remove background */
+  border: none;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-around; /* Spread links evenly */
+  align-items: center;
+  z-index: 1000;
+  padding: 0; /* Remove extra padding */
 }
 
 .navbar ul {
-  list-style: none;
   display: flex;
-  gap: 25px;
+  gap: 0; /* No extra gap since we use space-around */
+  width: 100%;
+  justify-content: space-around;
+  list-style: none;
   margin: 0;
   padding: 0;
 }
 
 .navbar a {
-  font-family: 'Lora', serif;
-  color: #2c2c2c;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 1em;
-  letter-spacing: 1.5px;
+  color: white; /* White text */
+  font-weight: 700;
+  font-size: 1.1em;
   text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
   transition: color 0.3s ease;
 }
 
 .navbar a:hover {
-  color: #3b6f5e;
+  color: #a8cfff; /* Subtle hover color */
 }
 
 /* --- Hero Section --- */
