@@ -24,38 +24,37 @@ body.home {
 }
 
 /* --- Navigation Bar --- */
+
 .navbar {
-  position: absolute; /* Float over hero image */
+  position: absolute;
   top: 20px;
   left: 0;
   width: 100%;
-  background: none; /* Remove background */
-  border: none;
   display: flex;
-  justify-content: space-around; /* Spread links evenly */
-  align-items: center;
+  justify-content: center;
   z-index: 1000;
-  padding: 0; /* Remove extra padding */
 }
 
 .navbar ul {
   display: flex;
-  gap: 0; /* No extra gap since we use space-around */
-  width: 100%;
-  justify-content: space-around;
+  gap: 40px;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
 .navbar a {
-  color: white; /* White text */
-  font-weight: 700;
+  color: white;
+  font-family: 'Cormorant Garamond', serif; /* Matches hero text */
+  font-weight: 400; /* Thinner */
   font-size: 1.1em;
   text-transform: uppercase;
   text-decoration: none;
   letter-spacing: 2px;
-  transition: color 0.3s ease;
+}
+
+.home-link a {
+  font-size: 1.3em; /* Slightly larger */
 }
 
 .navbar a:hover {
