@@ -103,26 +103,19 @@ body.home {
 }
 
 /* --- Homepage Link Boxes --- */
+
 .links-section {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  padding: 60px 0;
+  flex-direction: column; /* Stack vertically */
+  align-items: center;
+  padding: 20px 0; /* Less white space */
   background-color: #fff;
 }
 
 .link-box {
-  position: relative;
-  width: 45%;
-  height: 400px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin: 20px 0;
-  transition: transform 0.3s ease;
-  overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 90%; /* Full width but with some margin */
+  height: 300px; /* Slightly smaller height */
+  margin-bottom: 20px; /* Space between boxes */
 }
 
 .link-box:hover {
@@ -311,14 +304,26 @@ body.home {
     font-size: 1em;
   }
 
-  .navbar {
-    justify-content: center;
-    padding: 10px 20px;
-  }
+.navbar {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  background: none; /* Remove background */
+  border: none; /* Remove border */
+  display: flex;
+  justify-content: space-around; /* Spread links */
+  z-index: 1000;
+}
 
-  .navbar a {
-    font-size: 0.85em;
-  }
+.navbar a {
+  color: white; /* White font */
+  font-weight: 700;
+  font-size: 1.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
 
   .story-tile img {
     height: 200px;
