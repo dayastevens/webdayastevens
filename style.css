@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Lora:wght@400;500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Lora:wght@400;500&display=swap');
 
 /* --- General Styles --- */
 * {
@@ -24,8 +25,6 @@ body.home {
 }
 
 /* --- Navigation Bar --- */
-
-/* Navigation Bar */
 .navbar {
   position: absolute;
   top: 20px;
@@ -47,7 +46,7 @@ body.home {
 .navbar a {
   color: white;
   font-family: 'Cormorant Garamond', serif;
-  font-weight: 400; /* Thinner */
+  font-weight: 400;
   font-size: 1.1em;
   text-transform: uppercase;
   text-decoration: none;
@@ -55,18 +54,11 @@ body.home {
 }
 
 .home-link a {
-  font-size: 1.3em; /* Slightly larger for Home */
-}
-
-/* Subpage Headers */
-.subpage-header h1 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 3em;
-  color: #2c4a3b; /* Elegant greenish tone */
+  font-size: 1.3em;
 }
 
 .navbar a:hover {
-  color: #a8cfff; /* Subtle hover color */
+  color: #a8cfff;
 }
 
 /* --- Hero Section --- */
@@ -80,14 +72,13 @@ body.home {
   text-align: center;
 }
 
-
 .hero .overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: none; /* Removed white overlay */
+  background: none;
   z-index: 0;
 }
 
@@ -98,24 +89,30 @@ body.home {
   text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.7);
 }
 
+/* Hero Name */
 .name {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 4em;
+  font-size: 4.5em;
+  font-weight: 400;
+  letter-spacing: 2px;
+  text-transform: none;
   margin: 0;
 }
 
+/* Tagline */
 .tagline {
-  font-size: 1.4em;
-  letter-spacing: 2px;
-  margin-top: 10px;
+  font-family: 'Lora', serif;
+  font-size: 1.3em;
+  font-weight: 400;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
+  margin-top: 10px;
 }
 
 /* --- Homepage Link Boxes --- */
-
 .links-section {
   display: flex;
-  flex-direction: column; /* Stack vertically */
+  flex-direction: column;
   align-items: center;
   padding: 20px 0;
   background-color: #fff;
@@ -123,9 +120,9 @@ body.home {
 
 .link-box {
   width: 90%;
-  height: 350px; /* Ensure enough height for image visibility */
+  height: 350px;
   margin-bottom: 20px;
-  background-size: cover; /* Fill the box with the image */
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
@@ -134,7 +131,6 @@ body.home {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Keep your existing background-image assignments */
 .link-box.work {
   background-image: url('images/aspens.JPG');
 }
@@ -149,7 +145,7 @@ body.home {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4); /* Dark overlay for text contrast */
+  background: rgba(0, 0, 0, 0.4);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -163,16 +159,6 @@ body.home {
 
 .link-box:hover .link-overlay {
   background: rgba(0, 0, 0, 0.6);
-}
-
-
-/* Background images for homepage buttons */
-.link-box.gallery {
-  background-image: url('images/explore.JPG');
-}
-
-.link-box.work {
-  background-image: url('images/aspens.JPG');
 }
 
 /* --- Fade-in animation --- */
@@ -197,7 +183,7 @@ body.home {
   }
 }
 
-/* --- Contact Page Styles --- */
+/* --- Subpage Headers --- */
 .subpage-header {
   padding: 80px 0 30px;
   text-align: center;
@@ -206,10 +192,15 @@ body.home {
 
 .subpage-header h1 {
   font-family: 'Cormorant Garamond', serif;
-  font-size: 3em;
-  color: #2c4a3b; /* Elegant greenish tone */
+  font-size: 3.5em;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: #2c4a3b;
+  text-transform: none;
+  margin: 0;
 }
 
+/* --- Contact Page Styles --- */
 .contact-content {
   max-width: 600px;
   margin: 0 auto;
@@ -223,6 +214,7 @@ body.home {
   justify-content: center;
   gap: 40px;
   margin-top: 30px;
+  flex-wrap: wrap;
 }
 
 .contact-icons img {
@@ -235,143 +227,13 @@ body.home {
   transform: scale(1.2);
 }
 
-/* --- Pieces Page (Avery-style refined) --- */
+/* --- Pieces Page --- */
 .pieces-gallery {
   max-width: 1200px;
   margin: 0 auto;
   padding: 40px 20px;
 }
 
-.story-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 30px;
-}
-
-.story-tile {
-  position: relative;
-  display: block;
-  overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s ease;
-  text-decoration: none;
-  color: inherit;
-}
-
-.story-tile:hover {
-  transform: scale(1.02);
-}
-
-.story-tile img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  display: block;
-}
-
-.story-caption {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background: rgba(255, 255, 255, 0.85);
-  padding: 10px 15px;
-  text-align: center;
-}
-
-.story-caption h2 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.3em;
-  color: #2c2c2c;
-  margin: 0;
-}
-
-/* --- Contact Page Styles --- */
-.contact-content {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  text-align: center;
-}
-
-.contact-icons {
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  margin-top: 30px;
-  flex-wrap: wrap;
-}
-
-.contact-icons a {
-  display: inline-block;
-  transition: transform 0.3s ease;
-}
-
-.contact-icons a:hover {
-  transform: scale(1.1);
-}
-
-.contact-icons img {
-  width: 40px;
-  height: 40px;
-  object-fit: contain;
-}
-
-/* --- Responsive Layout --- */
-@media (max-width: 800px) {
-  .links-section {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .link-box {
-    width: 80%;
-    height: 300px;
-  }
-
-  .name {
-    font-size: 2.5em;
-  }
-
-  .tagline {
-    font-size: 1em;
-  }
-
-.navbar {
-  position: absolute;
-  top: 20px;
-  left: 0;
-  width: 100%;
-  background: none; /* Remove background */
-  border: none; /* Remove border */
-  display: flex;
-  justify-content: space-around; /* Spread links */
-  z-index: 1000;
-}
-
-.navbar a {
-  color: white; /* White font */
-  font-weight: 700;
-  font-size: 1.1em;
-  text-transform: uppercase;
-  text-decoration: none;
-  letter-spacing: 2px;
-}
-
-  .story-tile img {
-    height: 200px;
-  }
-
-  .contact-icons {
-    gap: 25px;
-  }
-
-  .contact-icons img {
-    width: 32px;
-    height: 32px;
-  }
-}
-/* === Full-Screen Scroll Cards === */
 .story-stack {
   display: flex;
   flex-direction: column;
@@ -381,15 +243,16 @@ body.home {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh; /* Full screen height */
+  height: 100vh;
   background-size: cover;
   background-position: center;
   text-decoration: none;
   color: #fff;
   position: relative;
-  opacity: 0; /* For fade-in */
+  opacity: 0;
   transform: translateY(30px);
   transition: opacity 1s ease, transform 1s ease;
+  margin-bottom: 40px;
 }
 
 .story-card.visible {
@@ -427,98 +290,7 @@ body.home {
   transform: translateX(8px);
 }
 
-/* Mobile optimization */
-@media (max-width: 768px) {
-  .overlay h2 {
-    font-size: 1.8rem;
-  }
-  .overlay {
-    padding: 15px;
-  }
-}
-/* Remove overlay ONLY on homepage */
-body.homepage .overlay {
-  background: none !important;
-}
-/* Add spacing between full-screen cards on Pieces page */
-.story-card {
-  margin-bottom: 40px; /* Adjust this value for more or less space */
-}
-/* === Gallery Page Styles === */
-.gallery-container {
-  padding: 40px;
-}
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 15px;
-}
-
-.gallery-item {
-  width: 100%;
-  height: auto;
-  cursor: pointer;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
-}
-
-.gallery-item:hover {
-  transform: scale(1.05);
-}
-
-/* Lightbox Styles */
-.lightbox {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-}
-
-.lightbox-content {
-  max-width: 90%;
-  max-height: 80%;
-  border-radius: 8px;
-}
-
-.close {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  font-size: 2rem;
-  color: #fff;
-  cursor: pointer;
-}
-/* Hover captions for gallery */
-.gallery-item {
-  position: relative;
-}
-
-.gallery-item::after {
-  content: attr(data-caption);
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  font-size: 1rem;
-  text-align: center;
-  padding: 8px 0;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.gallery-item:hover::after {
-  opacity: 1;
-}
-/* === Gallery Page Styles === */
+/* --- Gallery Page Styles --- */
 .gallery-container {
   padding: 40px;
 }
@@ -542,7 +314,6 @@ body.homepage .overlay {
   transform: scale(1.05);
 }
 
-/* Hover captions */
 .gallery-item::after {
   content: attr(data-caption);
   position: absolute;
@@ -560,57 +331,6 @@ body.homepage .overlay {
 
 .gallery-item:hover::after {
   opacity: 1;
-}
-
-/* Lightbox Styles */
-.lightbox {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
-  justify-content: center;
-  align-items: center;
-  z-index: 999;
-}
-
-.lightbox-content {
-  max-width: 90%;
-  max-height: 80%;
-  border-radius: 8px;
-}
-
-.close {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  font-size: 2rem;
-  color: #fff;
-  cursor: pointer;
-}
-/* === Gallery Page Styles === */
-.gallery-container {
-  padding: 40px;
-}
-
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 15px;
-}
-
-.gallery-item {
-  width: 100%;
-  height: auto;
-  cursor: pointer;
-  border-radius: 8px;
-  transition: transform 0.3s ease;
-}
-
-.gallery-item:hover {
-  transform: scale(1.05);
 }
 
 /* Lightbox Styles */
@@ -643,46 +363,32 @@ body.homepage .overlay {
   cursor: pointer;
 }
 
-/* Mobile Optimization */
-@media (max-width: 768px) {
-  .hero {
-    height: auto;
-    padding: 60px 20px;
+/* --- Responsive Layout --- */
+@media (max-width: 800px) {
+  .links-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .link-box {
+    width: 80%;
+    height: 300px;
   }
 
   .name {
-    font-size: 2.2em; /* Smaller for mobile */
+    font-size: 2.5em;
   }
 
   .tagline {
     font-size: 1em;
-    letter-spacing: 1px;
-  }
-
-  .navbar {
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
   }
 
   .navbar ul {
     flex-direction: column;
     gap: 10px;
   }
-
-  .links-section {
-    flex-direction: column;
-    padding: 30px 10px;
-  }
-
-  .link-box {
-    width: 100%;
-    height: 250px;
-    margin-bottom: 20px;
-  }
 }
 
-/* Extra Small Screens */
 @media (max-width: 480px) {
   .name {
     font-size: 1.8em;
@@ -691,35 +397,4 @@ body.homepage .overlay {
   .tagline {
     font-size: 0.9em;
   }
-}
-
-/* Hero Name (Homepage) */
-.name {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 4.5em; /* Slightly larger for elegance */
-  font-weight: 400; /* Thinner */
-  letter-spacing: 2px;
-  text-transform: none; /* Keep natural capitalization */
-  margin: 0;
-}
-
-/* Tagline */
-.tagline {
-  font-family: 'Lora', serif;
-  font-size: 1.3em;
-  font-weight: 400;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  margin-top: 10px;
-}
-
-/* Subpage Headers */
-.subpage-header h1 {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 3.5em;
-  font-weight: 400;
-  letter-spacing: 2px;
-  color: #2c4a3b; /* Elegant greenish tone */
-  text-transform: none; /* Natural capitalization */
-  margin: 0;
 }
