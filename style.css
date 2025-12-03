@@ -692,3 +692,34 @@ body.homepage .overlay {
     font-size: 0.9em;
   }
 }
+
+/* Hero Name (Homepage) */
+.name {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 4.5em; /* Slightly larger for elegance */
+  font-weight: 400; /* Thinner */
+  letter-spacing: 2px;
+  text-transform: none; /* Keep natural capitalization */
+  margin: 0;
+}
+
+/* Tagline */
+.tagline {
+  font-family: 'Lora', serif;
+  font-size: 1.3em;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-top: 10px;
+}
+
+/* Subpage Headers */
+.subpage-header h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3.5em;
+  font-weight: 400;
+  letter-spacing: 2px;
+  color: #2c4a3b; /* Elegant greenish tone */
+  text-transform: none; /* Natural capitalization */
+  margin: 0;
+}
