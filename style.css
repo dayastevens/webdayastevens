@@ -25,6 +25,7 @@ body.home {
 
 /* --- Navigation Bar --- */
 
+/* Navigation Bar */
 .navbar {
   position: absolute;
   top: 20px;
@@ -45,16 +46,23 @@ body.home {
 
 .navbar a {
   color: white;
-  font-family: 'Cormorant Garamond', serif; /* Matches hero text */
+  font-family: 'Cormorant Garamond', serif;
   font-weight: 400; /* Thinner */
   font-size: 1.1em;
   text-transform: uppercase;
   text-decoration: none;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
 }
 
 .home-link a {
-  font-size: 1.3em; /* Slightly larger */
+  font-size: 1.3em; /* Slightly larger for Home */
+}
+
+/* Subpage Headers */
+.subpage-header h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3em;
+  color: #2c4a3b; /* Elegant greenish tone */
 }
 
 .navbar a:hover {
