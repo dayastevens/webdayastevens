@@ -45,3 +45,33 @@
   </section>
 </body>
 </html>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  // Fetch most recent gallery image
+  fetch('gallery.html')
+    .then(response => response.text())
+    .then(html => {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, 'text/html');
+      const galleryItems = doc.querySelectorAll('.gallery-item img');
+      if (galleryItems.length > 0) {
+        const latestGalleryImg = galleryItems[galleryItems.length - 1].src;
+        document.querySelector('.link-box.gallery').style.backgroundImage = `url(${latestGalleryImg})`;
+      }
+    });
+
+  // Fetch most recent piece image
+  fetch('pieces.html')
+    .then(response => response.text())
+    .then(html => {
+      const parser = new DOMParser();
+      const doc = parser.parseFromString(html, 'text/html');
+      const storyTiles = doc.querySelectorAll('.story-tile img');
+      if (storyTiles.length > 0) {
+        const latestPieceImg = storyTiles[storyTiles.length - 1].src;
+        document.querySelector('.link-box.work').style.backgroundImage = `url(${latestPieceImg})`;
+      }
+    });
+});
+</script>
