@@ -103,6 +103,7 @@ body.home {
 }
 
 /* --- Homepage Link Boxes --- */
+
 .links-section {
   display: flex;
   flex-direction: column; /* Stack vertically */
@@ -113,15 +114,24 @@ body.home {
 
 .link-box {
   width: 90%;
-  height: 350px; /* Taller so image is visible */
+  height: 350px; /* Ensure enough height for image visibility */
   margin-bottom: 20px;
-  background-size: cover; /* Ensure image fills box */
+  background-size: cover; /* Fill the box with the image */
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Keep your existing background-image assignments */
+.link-box.work {
+  background-image: url('images/aspens.JPG');
+}
+
+.link-box.gallery {
+  background-image: url('images/explore.JPG');
 }
 
 .link-overlay {
