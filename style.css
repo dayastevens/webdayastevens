@@ -103,23 +103,25 @@ body.home {
 }
 
 /* --- Homepage Link Boxes --- */
-
 .links-section {
   display: flex;
   flex-direction: column; /* Stack vertically */
   align-items: center;
-  padding: 20px 0; /* Less white space */
+  padding: 20px 0;
   background-color: #fff;
 }
 
 .link-box {
-  width: 90%; /* Full width but with some margin */
-  height: 300px; /* Slightly smaller height */
-  margin-bottom: 20px; /* Space between boxes */
-}
-
-.link-box:hover {
-  transform: scale(1.03);
+  width: 90%;
+  height: 350px; /* Taller so image is visible */
+  margin-bottom: 20px;
+  background-size: cover; /* Ensure image fills box */
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .link-overlay {
@@ -128,23 +130,22 @@ body.home {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.4); /* Dark overlay for text contrast */
   display: flex;
   justify-content: center;
   align-items: center;
   color: #fff;
-  text-align: center;
   font-family: 'Lora', serif;
-  letter-spacing: 2px;
-  text-transform: uppercase;
   font-size: 1.6em;
-  transition: background 0.3s ease, transform 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  transition: background 0.3s ease;
 }
 
 .link-box:hover .link-overlay {
   background: rgba(0, 0, 0, 0.6);
-  transform: scale(1.02);
 }
+
 
 /* Background images for homepage buttons */
 .link-box.gallery {
