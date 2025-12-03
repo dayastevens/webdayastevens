@@ -1,84 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Daya Stevens</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Lora:wght@400;500&display=swap" rel="stylesheet">
-</head>
-<body class="home">
-<nav class="navbar">
-  <ul>
-    <li><a href="about.html">About</a></li>
-    <li><a href="pieces.html">Pieces</a></li>
-    <li class="home-link"><a href="index.html">Home</a></li>
-    <li><a href="gallery.html">Gallery</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
 
-  <header class="hero">
-    <div class="overlay"></div>
-    <div class="hero-text">
-      <h1 class="name">Daya Stevens</h1>
-      <p class="tagline">SCIENCE WRITER & JOURNALIST</p>
-    </div>
-  </header>
+/* Navigation Bar */
+.navbar {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 1000;
+}
 
-  <section class="links-section">
-    <div class="link-box work fade-in">
-      <a href="pieces.html">
-        <div class="link-overlay">
-          <h2>Read My Work</h2>
-        </div>
-      </a>
-    </div>
+.navbar ul {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
-     <div class="link-box gallery fade-in">
-      <a href="gallery.html">
-        <div class="link-overlay">
-          <h2>Explore My Gallery</h2>
-        </div>
-      </a>
-    </div>
-  </section>
-</body>
-</html>
+.navbar a {
+  color: white;
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 400; /* Thinner */
+  font-size: 1.1em;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 1.5px;
+}
 
+.home-link a {
+  font-size: 1.3em; /* Slightly larger for Home */
+}
 
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  // Update "Explore My Gallery" button
-  fetch('gallery.html')
-    .then(response => response.text())
-    .then(html => {
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(html, 'text/html');
-      const galleryItems = doc.querySelectorAll('.gallery-item');
-      if (galleryItems.length > 0) {
-        const latestGalleryImg = galleryItems[galleryItems.length - 1].getAttribute('src');
-        document.querySelector('.link-box.gallery').style.backgroundImage = `url(${latestGalleryImg})`;
-      }
-    });
-
-  // Update "Read My Work" button
-  fetch('pieces.html')
-    .then(response => response.text())
-    .then(html => {
-      const parser = new DOMParser();
-      const doc = parser.parseFromString(html, 'text/html');
-      const storyCards = doc.querySelectorAll('.story-card');
-      if (storyCards.length > 0) {
-        // Extract background-image from inline style
-        const latestPieceStyle = storyCards[storyCards.length - 1].getAttribute('style');
-        const match = latestPieceStyle.match(/url\(['"]?(.*?)['"]?\)/);
-        if (match && match[1]) {
-          document.querySelector('.link-box.work').style.backgroundImage = `url(${match[1]})`;
-        }
-      }
-    });
-});
-</script>
-
-
+/* Subpage Headers */
+.subpage-header h1 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 3em;
+  color: #2c4a3b; /* Elegant greenish tone */
+}
