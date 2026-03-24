@@ -8,9 +8,9 @@
 
 body {
   margin: 0;
-  padding-top: 70px;
   font-family: 'Lora', serif;
   color: #2c2c2c;
+  line-height: 1.6;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -26,13 +26,15 @@ body.home {
 
 /* --- Navigation Bar --- */
 .navbar {
-  position: absolute;
-  top: 20px;
+  position: sticky;
+  top: 0;
   left: 0;
   width: 100%;
   display: flex;
   justify-content: center;
   z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.6); /* optional but recommended */
+  padding: 10px 0;
 }
 
 .navbar ul {
