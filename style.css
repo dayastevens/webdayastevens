@@ -67,6 +67,9 @@ body.home .navbar a {
 .navbar a:hover {
   color: #a8cfff;
 }
+.contact-content {
+  margin-top: 80px;
+}
 
 /* --- Hero Section --- */
 .hero {
