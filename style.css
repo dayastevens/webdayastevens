@@ -46,7 +46,12 @@ body.home {
 }
 
 .navbar a {
+  color: #2c2c2c;
+}
+
+body.home .navbar a {
   color: white;
+}
   font-family: 'Cormorant Garamond', serif;
   font-weight: 400;
   font-size: 1.1em;
