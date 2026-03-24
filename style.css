@@ -211,12 +211,12 @@ body.home .navbar a {
 }
 
 /* --- Contact Page Styles --- */
-.contact-content {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 40px 20px;
-  text-align: center;
+.about-content {
+  max-width: 800px;   /* controls line length */
+  margin: 0 auto;     /* centers it */
+  padding: 60px 20px; /* adds space on sides */
   font-size: 1.2em;
+  line-height: 1.8;
 }
 
 .contact-icons {
