@@ -408,4 +408,19 @@ body.home .navbar a {
     font-size: 0.9em;
   }
 }
-.headshot url('images/headshot.JPG'); {2  display: block;3  width: 280px;4  height: auto;5  margin: 0 auto 30px auto;6  border-radius: 12px;7}
+.bio {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.headshot {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.bio-text {
+  flex: 1;
+}
